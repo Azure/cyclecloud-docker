@@ -1,0 +1,43 @@
+{
+  "name": "docker_test",
+  "description": "installs a buncha junk",
+  "long_description": "",
+  "maintainer": "Sean OMeara",
+  "maintainer_email": "sean@sean.io",
+  "license": "Apache-2.0",
+  "platforms": {
+  },
+  "dependencies": {
+    "docker": ">= 0.0.0",
+    "etcd": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.6.0",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ],
+  "gems": [
+
+  ]
+}
