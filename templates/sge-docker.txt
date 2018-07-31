@@ -13,7 +13,8 @@ Autoscale = $Autoscale
     ImageName = $ImageName
     SubnetId = $SubnetId
     Region = $Region
-    KeyPairLocation = $KeyPairLocation
+    KeyPairLocation = $KeypairLocation
+    UsePublicNetwork = $UsePublicNetwork
 
     AdditionalClusterInitSpecs = $DefaultClusterInitSpecs
     
