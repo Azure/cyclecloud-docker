@@ -4,7 +4,6 @@
 
 [cluster SGE-Docker]
 FormLayout = selectionpanel
-IconUrl = https://github.com/CycleCloudCommunity/docker/raw/master/icon.png
 Category = Applications
 
 Autoscale = $Autoscale
@@ -67,12 +66,12 @@ Order = 1
         [[[parameter DockerDescription]]]
         HideLabel = true
         Config.Plugin = pico.widget.HtmlTemplateWidget
-        Config.Template := "<table><tr><td><img src='https://github.com/CycleCloudCommunity/docker/raw/master/icon.png' width='192' height='192'></td></tr><tr><td><p>This cluster installs Docker along side SGE to enable the use of containers in SGE jobs.</p><br><p>See the <a href=\"https://www.docker.com/\" target=\"_blank\">Docker project site</a> for an overview.</p></td></tr></table>"
+        Config.Template := "<table><tr><td><img src='https://github.com/azure/cyclecloud-docker/raw/master/icon.png' width='192' height='192'></td></tr><tr><td><p>This cluster installs Docker along side SGE to enable the use of containers in SGE jobs.</p><br><p>See the <a href=\"https://www.docker.com/\" target=\"_blank\">Docker project site</a> for an overview.</p></td></tr></table>"
 
         [[[parameter Readme]]]
         HideLabel = true
         Config.Plugin = pico.widget.HtmlTemplateWidget
-        Config.Template := "Follow the instructions in the <a href=\"https://github.com/CycleCloudCommunity/docker/\" target=\"_blank\">README</a> for details on instructions on extending and configuring the Project for your environment."
+        Config.Template := "Follow the instructions in the <a href=\"https://github.com/azure/cyclecloud-docker/\" target=\"_blank\">README</a> for details on instructions on extending and configuring the Project for your environment."
 
 [parameters Required Settings]
 Order = 10
