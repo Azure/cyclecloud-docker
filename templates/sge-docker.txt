@@ -13,7 +13,7 @@ Autoscale = $Autoscale
     ImageName = $ImageName
     SubnetId = $SubnetId
     Region = $Region
-    KeyPairLocation = ~/.ssh/cyclecoud.pem
+    KeyPairLocation = ~/.ssh/cyclecloud.pem
     UsePublicNetwork = $UsePublicNetwork
 
     AdditionalClusterInitSpecs = $DefaultClusterInitSpecs
