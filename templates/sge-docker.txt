@@ -13,7 +13,7 @@ Autoscale = $Autoscale
     ImageName = $ImageName
     SubnetId = $SubnetId
     Region = $Region
-    KeyPairLocation = $KeypairLocation
+    KeyPairLocation = ~/.ssh/cyclecoud.pem
     UsePublicNetwork = $UsePublicNetwork
 
     AdditionalClusterInitSpecs = $DefaultClusterInitSpecs
@@ -120,7 +120,7 @@ Order = 10
         Config.IntegerOnly = true
 
         [[[parameter UseLowPrio]]]
-        Label = Use Low Prio Instances
+        Label = Low Priority
         DefaultValue = false
         Widget.Plugin = pico.form.BooleanCheckBox
         Widget.Label = Use low priority instances for execute hosts
@@ -160,26 +160,24 @@ Order = 20
         Description = The list of Docker images to preload on the Execute Nodes
 
         [[[parameter DockerRegistryName]]]
-        Label = Docker Registry Name
-        Description = The name of the docker registry to use
+        Label = Registry Name
+        Description = The name of the Docker registry to use
 	
         [[[parameter DockerRegistryURL]]]
-        Label = Docker Registry URL
-        Description = The URL of the docker registry to use
+        Label = Registry URL
+        Description = The URL of the Docker registry to use
 	
         [[[parameter DockerRegistryUsername]]]
-        Label = Docker Registry Username
-        Description = The Username for docker registry access
+        Label = Registry Username
+        Description = The Username for Docker registry access
 	
         [[[parameter DockerRegistryPassword]]]
-        Label = Docker Registry Password
-        Description = The Password for docker registry access
+        Label = Registry Password
+        Description = The Password for Docker registry access
 
         [[[parameter DockerRegistryEmail]]]
-        Label = Docker Registry Email
-        Description = The Email Address to use for docker registry access (if required)
-	
-
+        Label = Registry Email
+        Description = The Email Address to use for Docker registry access (if required)
 
     [[parameters Software]]
     Description = "Specify the scheduling software, and base OS installed on all nodes, and optionally the cluster-init and chef versions from your Locker."
@@ -192,18 +190,18 @@ Order = 20
         DefaultValue = cycle.image.centos7
 
         [[[parameter DefaultClusterInitSpecs]]]
-        Label = Default Cluster-Init Specs
+        Label = Default Cluster-Init
         Description = Cluster init specs to apply to all nodes
         ParameterType = Cloud.ClusterInitSpecs
 
         [[[parameter MasterClusterInitSpecs]]]
-        Label = Master Cluster-Init Specs
+        Label = Master Cluster-Init
         DefaultValue = =undefined
         Description = Cluster init specs to apply to the master node
         ParameterType = Cloud.ClusterInitSpecs
     
         [[[parameter ExecuteClusterInitSpecs]]]
-        Label = Execute Cluster-Init Specs
+        Label = Execute Cluster-Init
         DefaultValue = =undefined
         Description = Cluster init specs to apply to execute nodes
         ParameterType = Cloud.ClusterInitSpecs
@@ -214,7 +212,7 @@ Order = 20
 
         [[[parameter ReturnProxy]]]
         Label = Return Proxy
-        DefaultValue = false
+        DefaultValue = true
         ParameterType = Boolean
         Config.Label = Use SSH tunnel to connect to CycleCloud (required if direct access is blocked)
 
@@ -223,10 +221,4 @@ Order = 20
         DefaultValue = true
         ParameterType = Boolean
         Config.Label = Access master node from the Internet
-
-        [[[parameter KeyPairLocation]]]
-        Label = Keypair Path
-        Description = The path to the private SSH key to use for the `cyclecloud` user on linux nodes.
-        DefaultValue = ~/.ssh/cyclecloud.pem
-        Required = True
 
