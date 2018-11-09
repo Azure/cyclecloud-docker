@@ -25,7 +25,7 @@ Autoscale = $Autoscale
         password = $DockerRegistryPassword
         email = $DockerRegistryEmail
 
-        [[[cluster-init cyclecloud/docker:default:1.0.0]]]
+        [[[cluster-init cyclecloud/docker:default:1.0.1]]]
 
     [[node master]]
     MachineType = $MasterMachineType
