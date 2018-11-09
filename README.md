@@ -45,22 +45,6 @@ This sample requires the following:
         instead.
 
 
-## Configuring the Project ##
-
-
-The first step is to configure the project for use with your storage locker:
-
-  1. Open a terminal session with the CycleCloud CLI enabled.
-
-  2. Switch to the docker project directory.
-
-  3. Copy the following source tarballs and/or RPM and DEB files to `./blobs`
-    
-  4. If the version number is not 2.4.5, update the version numbers in `project.ini` and `templates/pbs-docker.txt`
-
-  5. If adding the RPM and/or DEB files, add them to the Files list in the `project.ini`
-    
-
 ## Deploying the Project ##
 
 
