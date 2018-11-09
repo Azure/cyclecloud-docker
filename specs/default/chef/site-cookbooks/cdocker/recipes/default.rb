@@ -47,45 +47,46 @@ if not node['docker']['registry']['url'].nil?
   end
 end
 
-if node['docker']['images'].nil? || node['docker']['images'].empty?
-  return
-end
-
-images = node['docker']['images']
-if !images.is_a?(Array)
-  images = images.split(',')
-end
-
-
-images.each do |image|
-  image_parts = image.split(':')
-  image_name = image_parts[0]
-  if image_parts.length > 1
-    image_tag = image_parts[1]
-    docker_image image_name do
-      repo image_name
-      tag image_tag
-      action :pull
-      retries 5
-      retry_delay 10
-    end
-  else
-    docker_image image_name do
-      action :pull
-      retries 5
-      retry_delay 10
-    end
-  end    
-end
-
 [ "root", "cyclecloud", node['cyclecloud']['cluster']['user']['name'] ].each do |username|
-  group "docker" do
+  group "add #{username} to docker" do
+    group_name "docker"
     action :modify
     members username
     append true
   end
 end
 
+
+if not node['docker']['images'].nil? && not node['docker']['images'].empty?
+
+  images = node['docker']['images']
+  if !images.is_a?(Array)
+    images = images.split(',')
+  end
+
+
+  images.each do |image|
+    image_parts = image.split(':')
+    image_name = image_parts[0]
+    if image_parts.length > 1
+      image_tag = image_parts[1]
+      docker_image image_name do
+        repo image_name
+        tag image_tag
+        action :pull
+        retries 5
+        retry_delay 10
+      end
+    else
+      docker_image image_name do
+        action :pull
+        retries 5
+        retry_delay 10
+      end
+    end    
+  end
+
+end
 
 
 
