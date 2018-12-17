@@ -38,7 +38,7 @@ docker_service 'default' do
 end
 
 
-if not node['docker']['registry']['url'].nil?
+if ! node['docker']['registry']['url'].nil?
 #  docker_registry "https://#{node['docker']['registry']['url']}/v1/" do
   docker_registry node['docker']['registry']['url'] do
     username node['docker']['registry']['username']
@@ -57,7 +57,7 @@ end
 end
 
 
-if not node['docker']['images'].nil? && not node['docker']['images'].empty?
+if !node['docker']['images'].nil? && !node['docker']['images'].empty?
 
   images = node['docker']['images']
   if !images.is_a?(Array)
