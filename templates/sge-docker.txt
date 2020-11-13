@@ -67,7 +67,7 @@ Order = 1
         [[[parameter DockerDescription]]]
         HideLabel = true
         Config.Plugin = pico.widget.HtmlTemplateWidget
-        Config.Template := "<table><tr><td><img src='https://github.com/azure/cyclecloud-docker/raw/master/icon.png' width='192' height='192'></td></tr><tr><td><p>This cluster installs Docker along side SGE to enable the use of containers in SGE jobs.</p><br><p>See the <a href=\"https://www.docker.com/\" target=\"_blank\">Docker project site</a> for an overview.</p></td></tr></table>"
+        Config.Template := "<table role=\"presentation\"><tr><td><img alt=\"Docker icon\" src='https://github.com/azure/cyclecloud-docker/raw/master/icon.png' width='192' height='192'></td></tr><tr><td><p>This cluster installs Docker along side SGE to enable the use of containers in SGE jobs.</p><br><p>See the <a href=\"https://www.docker.com/\" target=\"_blank\">Docker project site</a> for an overview.</p></td></tr></table>"
 
         [[[parameter Readme]]]
         HideLabel = true
