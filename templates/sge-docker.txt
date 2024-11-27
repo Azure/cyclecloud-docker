@@ -37,11 +37,7 @@ Autoscale = $Autoscale
         docker.images = $MasterDockerImages
 
         [[[network-interface eth0]]]
-        AssociatePublicIpAddress = $UsePublicNetwork
-
-        [[[input-endpoint ganglia]]]
-        PrivatePort = 8652
-        PublicPort = 8652        
+        AssociatePublicIpAddress = $UsePublicNetwork      
 
 
     [[nodearray execute]]
